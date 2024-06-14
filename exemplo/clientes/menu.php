@@ -16,11 +16,12 @@
         if(isset($_SESSION['logado']) && $_SESSION['logado'] == true){
             echo "<a href=\"logoff.php\"><li>Sair</li></a>";
             echo "<li class=\"nomeMenu\">Olá $_SESSION[nome]</li>";
+            echo "<li class=\"emailMenu\">Olá $_SESSION[email]</li>";
             echo "<a href=editarPerfil.php?codigo=$_SESSION[codigo]>";
-            echo "<img src=$_SESSION[foto] class=\"miniatura\"></li>";
+            echo "<img src=$_SESSION[fotoUrl] class=\"miniatura\"></li>";
             echo "</a>";
         }else{
-            echo "<a href=\"login.php\"><li>Entrar</li></a>";
+            echo "<a href=\"Logar.php\"><li>Entrar</li></a>";
         }
 
 ?>
