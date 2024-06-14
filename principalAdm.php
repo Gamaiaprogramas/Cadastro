@@ -1,11 +1,12 @@
     <?php include('head.php');?>
 <body>
    <?php 
-    echo "<div class= 'cards'>";
+   
     require('connect.php');
     $produtos = mysqli_query($con, "SELECT * FROM `produtos`");
     @session_start();
-    while($produto = mysqli_fetch_assoc($produtos)){
+    while($produto = mysqli_fetch_assoc($produtos)){ 
+        echo "<div class= 'cards'>";
         echo "<div>";
         echo "<div class=imageCard>";
         if($produto['fotoProduto']==""){
