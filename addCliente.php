@@ -26,9 +26,42 @@
         <label><p>telefone:</p><input type="text" name="telefone" id="txtTelefone"></label>
         <label><p>Nascimento:</p><input type="date" name="nascto"></label>
         <select id="opcaoTime" name="time">
-            <option value="0">Selcionar</option>
-            <option value="1">Corinthians</option>
-            <option value="2">Palmeiras</option>
+        <option>Selecionar</option>
+            <option> Botafogo</option>
+            <option> Flamengo</option>
+            <option> Bahia</option>
+            <option> São Paulo</option>
+            <option> Athletico-PR</option>
+            <option >Atlético-MG</option>
+            <option >Red Bull Bragantino</option>
+            <option >Palmeiras</option>
+            <option >Internacional</option>
+            <option >Cruzeiro</option>
+            <option >Fortaleza</option>
+            <option >Juventude</option>
+            <option >Grêmio</option>
+            <option >Vasco da Gama</option>
+            <option >Corinthians</option>
+            <option >Fluminense</option>
+            <option >Criciúma</option>
+            <option >Atlético-GO</option>
+            <option >Cuiabá</option>
+            <option >Vitória</option>
+            <option >América-MG</option>
+            <option >Avaí</option>
+            <option >Botafogo-SP</option>
+            <option >Ceará</option>
+            <option >Chapecoense</option>
+            <option >CRB</option>
+            <option >Guarani</option>
+            <option >Ituano</option>
+            <option >Mirassol</option>
+            <option >Novorizontino</option>
+            <option >Ponte Preta</option>
+            <option >Sport</option>
+            <option >Vila Nova</option>
+            <option >Santos</option>
+            <option >Amazonas</option>
         </select>
         <label><p>Senha:</p><input type="passworld" name="senha1" onkeyup="verificaSenha(senha1.value,senha2.value)" require></label>
         <label><p>Confirmar senha:</p><input type="passworld" name="senha2" onkeyup="verificaSenha(senha1.value,senha2.value)" require></label>

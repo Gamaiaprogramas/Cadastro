@@ -10,7 +10,11 @@ $busca = mysqli_query($con,"Select `codProduto` from `produtos` where `codProdut
 // $buscaArray = mysqli_fetch_assoc($busca);
 
 if($busca->num_rows == 0){ 
-    $path = "fotosProdutos/" .$timeProduto . "/". md5(time()). ".jpg";
+    $dirPath = "fotosProdutos/" .$timeProduto;
+    if (!file_exists($dirPath)) {
+        mkdir($dirPath, 0777, true);
+    }
+    $path = $dirPath . "/". md5(time()). ".jpg";
     move_uploaded_file($foto['tmp_name'], $path);
  
 
@@ -30,3 +34,4 @@ else{
 
 $_SESSION['msg'] = $msg;
 header($destino);
+?>

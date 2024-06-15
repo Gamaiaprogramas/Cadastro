@@ -19,34 +19,39 @@
                 <a href=""><div><p>Marca</p></div></a>
             </div>
             <div class="selecao2">
-            <?php 
-  
+    <?php 
     require('connect.php');
     $produtos = mysqli_query($con, "SELECT * FROM `produtos`");
-    @session_start();
-    while($produto = mysqli_fetch_assoc($produtos)){
-          echo "<a href='mostrarProds.php' ><div class= 'cardsPrinc'>";
-            echo "<div>";
-            echo "<div class=>";
-            if($produto['fotoProduto']==""){
-                echo "<img src=icons/6073873.png>";
-            }else{
-                echo "<img src=$produto[fotoProduto]>";
-            }
-            echo "</div>";
 
-            echo "<div>";
+    while($produto = mysqli_fetch_assoc($produtos)) {
+        // Use uma variável de sessão para armazenar o código do produto
+        $_SESSION['produto_cod'] = $produto['codProduto'];
 
-            echo "<p>Nome: $produto[nomeCamisa] - $produto[timeProduto]</p>";
-            echo "<p>Descrição: $produto[infoProduto]</p>";
-            echo "<p>Preço: R$ $produto[precoProduto]</p>";
-            echo "</div>";
-            echo "</div>";
-            echo "</div></a>";
+        // Crie um link para redirecionar para mostrarProds.php com o código do produto
+        echo "<a href='mostrarProds.php?cod={$produto['codProduto']}'><div class='cardsPrinc'>";
+        echo "<div>";
+        echo "<div>";
 
+        if($produto['fotoProduto'] == "") {
+            echo "<img src='icons/6073873.png'>";
+        } else {
+            echo "<img src='{$produto['fotoProduto']}'>";
         }
-    
-        ?>
+
+        echo "</div>";
+
+        echo "<div>";
+        echo "<p>Nome: {$produto['nomeCamisa']} - {$produto['timeProduto']}</p>";
+        echo "<p>Descrição: {$produto['infoProduto']}</p>";
+        echo "<p>Preço: R$ {$produto['precoProduto']}</p>";
+        echo "</div>";
+        echo "</div>";
+        echo "</div></a>";
+    }
+    ?>
+</div>
+
+</div>
             </div>
     </main>
 

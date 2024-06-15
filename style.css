@@ -1,5 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 
 *{
     box-sizing: border-box;
@@ -199,4 +201,54 @@ a > .cardsPrinc > div {
 .selecao2 > a{
 	color: black;
 	text-decoration: none;
+}
+.mostrarProdDiv{
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	background-color: aqua;
+}
+.mostrarProdDiv > img{
+	height: 70vh;
+	width: 27vw;
+	border-radius: 2vh;
+	margin-left: 10vh;
+}
+.mostrarProdDiv > div{
+	margin-left: 10vh;
+	background-color: brown;
+	height: 70vh;
+	border-radius: 4vh;
+	width: 50vw;
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	border: solid 0.5vh red;
+	box-shadow: 1vh 1vh 10vh red;
+}
+
+.mostrarProdDiv > div > p {
+	margin-left: 3vh;
+}
+.tituloProd{
+	font-size: 4vh;
+	font-family: "Anton", sans-serif;
+	font-weight: 100;
+	font-style: normal;
+}
+.simbolo{
+	height: 7vh;
+	width: 7vh;
+	position: absolute;
+	margin-top: 60VH; 
+	margin-left: 90vh;
+	
+}
+.descProd{
+	background-color: aqua;
+	height: 45vh;
+	width: 90vh;
+	overflow-x: auto;
 }
