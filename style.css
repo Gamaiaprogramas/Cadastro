@@ -1,24 +1,16 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
-
-
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: "Freeman", sans-serif;
-
-      
+/* Estilos gerais */
+body {
+    font-family: 'Freeman', sans-serif;
+    overflow-x: hidden;
 }
 
-nav{
-
+nav {
     width: 100%;
     height: 6vh;
     background-color: black;
 }
-fieldset{
+
+fieldset {
     width: 50%;
     height: 93.7vh;
     float: left;
@@ -26,9 +18,9 @@ fieldset{
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-
 }
-fieldset > form{
+
+fieldset > form {
     display: flex;
     width: 30vw;
     flex-direction: column;
@@ -37,218 +29,335 @@ fieldset > form{
     height: 100%;
     background-color: aqua;
 }
-fieldset > form > div{
+
+fieldset > form > div {
     position: absolute;
     margin-left: 30vw;
-
 }
-.txtCansado{
+
+.txtCansado {
     font-size: 9vh;
 }
 
-/* INICIO DA PAGE PRINCIPAL  */
-
+/* Estilos para a página principal */
 .cards {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
-.cards > div {
-	display: flex;
-	width: 450px;
-	height: 200px;
-	border: solid 1px black;
-	margin: 10px;
-	padding: 10px;
-	box-shadow: 3px 3px 3px rgb(7, 108, 185);
-	font-size: 18px;
-	text-shadow: 1px 1px 1px black;
-	font-weight: 900;
-	transition: 0.5s;
-}
-.cards > div:hover {
-	transform: translateX(2px) translateY(2px);
-	background-color: rgba(63, 169, 226, 0.6);
-	box-shadow: none;
-}
-.imageCard {
-	perspective: 100px;
-	transition: 1s;
-}
-.imageCard > img {
-	object-fit: contain;
 
+.cards > div {
+    display: flex;
+    width: 450px;
+    height: 200px;
+    border: solid 1px black;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 3px 3px 3px rgb(7, 108, 185);
+    font-size: 18px;
+    text-shadow: 1px 1px 1px black;
+    font-weight: 900;
+    transition: 0.5s;
 }
+
+.cards > div:hover {
+    transform: translateX(2px) translateY(2px);
+    background-color: rgba(63, 169, 226, 0.6);
+    box-shadow: none;
+}
+
+.imageCard {
+    perspective: 100px;
+    transition: 1s;
+}
+
+.imageCard > img {
+    object-fit: contain;
+}
+
 .cards > div:hover .imageCard > img {
-	filter: grayscale(0);
-	transition: 1s;
+    filter: grayscale(0);
+    transition: 1s;
 }
 
 .cards > div:active {
-	box-shadow: none;
-	transform: rotateY(360deg);
+    box-shadow: none;
+    transform: rotateY(360deg);
 }
+
 .cards > div > div:first-child {
-	overflow: hidden;
-	width: 40%;
+    overflow: hidden;
+    width: 40%;
 }
+
 .cards > div > div > img {
-	max-width: 100%;
-	aspect-ratio: 3/4;
+    max-width: 100%;
+    aspect-ratio: 3/4;
 }
+
 .cards > div > div:nth-child(2) {
-	display: flex;
-	width: 50%;
-	padding-left: 20px;
-	flex-direction: column;
-	justify-content: space-between;
+    display: flex;
+    width: 50%;
+    padding-left: 20px;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 .botoesCard {
-	width: 100%;
-	display: flex;
-	justify-content: space-evenly;
-	text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
 }
+
 .botoesCard img {
-	height: 30px;
+    height: 30px;
 }
 
-/* topo */
-
-.topo{
-	width: 100%;
-	height: 10vh;
-	background-color: black;
-	display: flex;
-	justify-content: space-around;
-}
-.topo > input{
-	width: 22vw;
-	cursor: pointer;
-}
-.topo > input[type=button]{
-	width: 10vw;
-	background-color: rgba(245, 222, 179, 0);
-	cursor: pointer;
-	border: none;
-	color: white;
-	font-size: 4vh;
-	text-decoration: underline;
-}
-.topo > img{
-	border-radius: 50%;
-	width: 10vh;
-	height: 10vh;
+/* Estilos para o topo */
+.topo {
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-/* main */
-
-main{
-	display: flex;
-	flex-direction: column;
+.topo >  input {
+    width: 22vw;
+    cursor: pointer;
+}
+.topo > form > input {
+    width: 22vw;
+    cursor: pointer;
+}
+.topo > input[type=button] {
+    width: 10vw;
+    background-color: rgba(245, 222, 179, 0);
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-size: 4vh;
+    text-decoration: underline;
 }
 
-.fotoMain{
-	background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuIzVI9QfXjUc5YEUGP4KJQfepQFkY_J1qyw&s);
-	filter: grayscale(1);
-	background-repeat: repeat;
-	background-size: cover;
-	width: 100%;
-	height: 60vh;
+.topo > a >img {
+    border-radius: 50%;
+    width: 10vh;
+    height: 10vh;
 }
 
-.selecao1{
-	background-color: green;
-	width: 100%;
-	height: 40vh;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	border: solid 0.6vh rgb(107, 107, 107);
-
-}
-.selecao1 >a> div{
-	cursor: pointer;
-	height: 30vh;
-	width: 70vh;
-	background-color: aqua;
-	border: solid 1vh black;
+/* Estilos para o main */
+main {
+    display: flex;
+    flex-direction: column;
 }
 
-/* mostrar os produtos */
+.fotoMain {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuIzVI9QfXjUc5YEUGP4KJQfepQFkY_J1qyw&s);
+    filter: grayscale(1);
+    background-repeat: repeat;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+}
 
-.selecao2{
-	display: flex;
-	flex-wrap: wrap;
-	background-color: aqua;
-	justify-content: space-evenly;
+.selecao1 {
+    background-color: green;
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 0.6vh rgb(107, 107, 107);
 }
-a >.cardsPrinc{
-	background-color: brown;
-	display: flex;
-	align-items: center;
+
+.selecao1 > a > div {
+    cursor: pointer;
+    height: 30vh;
+    width: 70vh;
+    background-color: aqua;
+    border: solid 1vh black;
 }
-a > .cardsPrinc > div > div > img{
-	height: 40vh;	
-	width: 40vh;
+
+/* Estilos para mostrar os produtos */
+.selecao2 {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aqua;
+    justify-content: space-evenly;
 }
+
+.selecao2 a {
+    color: black;
+    text-decoration: none;
+}
+
+a > .cardsPrinc {
+    background-color: brown;
+    display: flex;
+    align-items: center;
+}
+
+a > .cardsPrinc > div > div > img {
+    height: 40vh;	
+    width: 40vh;
+}
+
 a > .cardsPrinc > div {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	cursor:pointer;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
 }
-.selecao2 > a{
-	color: black;
-	text-decoration: none;
+
+.mostrarProdDiv {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: aqua;
 }
-.mostrarProdDiv{
-	display: flex;
-	align-items: center;
-	height: 100vh;
-	width: 100%;
-	background-color: aqua;
+
+.mostrarProdDiv > img {
+    height: 70vh;
+    width: 27vw;
+    border-radius: 2vh;
+    margin-left: 10vh;
 }
-.mostrarProdDiv > img{
-	height: 70vh;
-	width: 27vw;
-	border-radius: 2vh;
-	margin-left: 10vh;
-}
-.mostrarProdDiv > div{
-	margin-left: 10vh;
-	background-color: brown;
-	height: 70vh;
-	border-radius: 4vh;
-	width: 50vw;
-	align-items: center;
-	display: flex;
-	justify-content: space-around;
-	flex-direction: column;
-	border: solid 0.5vh red;
-	box-shadow: 1vh 1vh 10vh red;
+
+.mostrarProdDiv > div {
+    margin-left: 10vh;
+    background-color: brown;
+    height: 70vh;
+    border-radius: 4vh;
+    width: 50vw;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border: solid 0.5vh red;
+    box-shadow: 1vh 1vh 10vh red;
 }
 
 .mostrarProdDiv > div > p {
-	margin-left: 3vh;
+    margin-left: 3vh;
 }
-.tituloProd{
-	font-size: 4vh;
-	font-family: "Anton", sans-serif;
-	font-weight: 100;
-	font-style: normal;
+
+.tituloProd {
+    font-size: 4vh;
+    font-family: "Anton", sans-serif;
+    font-weight: 100;
+    font-style: normal;
 }
-.simbolo{
-	height: 7vh;
-	width: 7vh;
-	position: absolute;
-	margin-top: 60VH; 
-	margin-left: 90vh;
-	
+
+.simbolo {
+    height: 7vh;
+    width: 7vh;
+    position: absolute;
+    margin-top: 60vh; 
+    margin-left: 90vh;
 }
-.descProd{
-	background-color: aqua;
-	height: 45vh;
-	width: 90vh;
-	overflow-x: auto;
+
+.descProd {
+    background-color: aqua;
+    height: 45vh;
+    width: 90vh;
+    overflow-x: auto;
 }
+
+/* Carrinho */
+.carrinhoDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divUnica {
+    align-items: center;
+    display: flex;
+    height: 30vh;
+    width: 70vh;
+    border: solid 1vh;
+    margin-top: 2vh;
+}
+
+.prodCarr {
+    height: 30vh;
+    width: 30vh;
+}
+
+.divUnica > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.divUnica > div > p {
+    font-size: 4vh;
+}
+
+.divUnica > div > a > button {
+    cursor: pointer;
+    margin-top: 4vh;
+}
+
+.simCarr {
+    height: 7vh;
+    position: absolute;
+    width: 7vh;
+    margin-top: 12vh;
+    margin-left: 26vh;
+}
+
+/* Ajustes do Slick */
+.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-list {
+    padding: 0;
+}
+
+.slick-track {
+    display: flex;
+}
+
+.slick-slide {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.cardsPrinc {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.cardsPrinc img {
+    max-width: 100%;
+    height: auto;
+}
+
+ /* pesquisa */
+
+ .nav_pesquisa{
+    background-color: black;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ }
+ .nav_pesquisa > a > img{
+    height: 9vh; 
+    width: 9vh;
+    border-radius: 50%;
+ }

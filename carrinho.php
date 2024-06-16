@@ -5,16 +5,27 @@
 
     <?php 
     session_start();
+    require('connect.php');
 
-    // Verifica se há itens no carrinho
     if(isset($_SESSION['carrinho']) && !empty($_SESSION['carrinho'])) {
-        echo "<ul>";
         foreach($_SESSION['carrinho'] as $produto_cod) {
-            // Aqui você pode consultar o banco de dados para obter os detalhes do produto
-            // Neste exemplo, apenas mostraremos o código do produto
-            echo "<li>Produto Código: $produto_cod</li>";
+            $query = "SELECT * FROM `produtos` WHERE codProduto = '$produto_cod'";
+            $resultado = mysqli_query($con, $query);
+            echo "<div class='divUnica'>";
+            if(mysqli_num_rows($resultado) == 1) {
+                $produto = mysqli_fetch_assoc($resultado);
+                echo "<div>";
+                echo "<img class='prodCarr' src='{$produto['fotoProduto']}' alt='{$produto['nomeCamisa']}'>";
+                echo "</div>";
+                echo "<div>";
+                echo "<p>{$produto['nomeCamisa']}</p>";
+                echo "<a href='excluirCarrinho.php?cod=$produto_cod'><button>Excluir do carrinho</button></a>";
+                echo "<img class='simCarr' src='fotos/simbolos/{$produto['timeProduto']}.png'>";
+                echo "</div>";
+                echo "</div>";
+            }
         }
-        echo "</ul>";
+        echo "<a href='finalizarCompra.php'><button>Finalizar Compra</button></a>";
     } else {
         echo "<p>Seu carrinho está vazio.</p>";
     }
