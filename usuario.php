@@ -1,11 +1,14 @@
 <?php include('head.php'); ?>
 
 <body>
+    <div class = "mainUser">
+        <h1>Alterar Usuario</h1>
     <div class="Usuario">
         <?php
             @session_start();
             if(isset($_SESSION['logado']) && $_SESSION['logado'] == true){
-                echo "<img src='$_SESSION[foto]' class='miniatura'></li>";
+                echo "<img src='$_SESSION[foto]' class='miniaturaPerf'></li>";
+                echo "<div>";
                 echo "<li class='nomeMenu'>Olá $_SESSION[nome]</li>";
                 echo "<li class='emailMenu'>Email $_SESSION[email]</li>";
 
@@ -21,10 +24,12 @@
                 echo "<a href='logoff.php'><li>Sair</li></a>";
             } else {
                 echo "<a href='login.php'><li>Entrar</li></a>";
+                
             }
         ?>
+         </div>
     </div>
-
+    </div>
     <div id="classePedidos">
         <?php
         if (isset($_GET['pedidos']) && $_GET['pedidos'] == 'true' && isset($_SESSION['codigo'])) {

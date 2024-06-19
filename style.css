@@ -1,4 +1,11 @@
 /* Estilos gerais */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
     font-family: 'Freeman', sans-serif;
     overflow-x: hidden;
@@ -361,3 +368,242 @@ a > .cardsPrinc > div {
     width: 9vh;
     border-radius: 50%;
  }
+
+    /* usuario */
+
+.Usuario{
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    justify-content: space-evenly;
+    border: solid 1vh white;
+    height: 70vh;
+    width: 110vh;
+    box-shadow: 1vh 1vh 10vh black;
+    border-radius: 10vh;
+}
+.Usuario > img{
+    height: 40vh;
+    width: 40vh;
+    border-radius: 50%;
+}
+.Usuario > div{
+    height: 100%;
+    
+    width: 40vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+ .Usuario > div > li {
+   list-style: none; 
+   color: white;
+   text-decoration-color: white;
+   text-decoration: none;
+}
+.Usuario > div > a> li {
+    cursor: pointer;
+    list-style: none; 
+    color: rgb(0, 0, 0);
+    border-radius: 1vh;
+    background-color: #fff;
+    height: 3vh;
+    text-align: center;
+    width: 9vw;
+    text-decoration: none;
+ }
+.mainUser{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+   
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.mainUser > h1{
+    font-size: 7vh;
+    text-shadow: 1vh 1vh 4vh black;
+}
+
+    /* alterar usuario */
+
+.altUsuariodiv{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.altUsuariodiv > h1{
+    font-size: 7vh;
+    text-shadow: 1vh 1vh 4vh white;
+    color: white;
+}
+
+.fieldUser{
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    border: solid rgb(255, 255, 255) 1vh;
+    background-color: black;
+    height: 70vh;
+    box-shadow: 1vh 1vh 10vh white ;
+    border-radius: 10vh;
+}
+.fieldUser > form{
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    justify-content: space-between;
+}
+
+.imgUser{
+    height: 20vh;
+    width: 17vw;
+}
+.fieldUser > form > p{
+    font-size: 3vh;
+    color: white;
+}
+.fieldUser > form > p > input{
+    height: 3vh;
+    width:13vw;
+    cursor: pointer;
+    text-align: center;
+    background-color: white;
+    border-radius: 10vh;
+    border: none;
+}
+.fieldUser > form > select{
+    width: 7vw;
+    border-radius: 10vh;
+    border: none;
+}
+
+    /* parte gabreil */
+    .topo {
+        width: 100%;
+        height: 10vh;
+        background-color: black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .topo > a > input {
+        width: 22vw;
+        cursor: pointer;
+    }
+    .topo > form > input {
+        width: 22vw;
+        cursor: pointer;
+        padding: 5px;
+        border-radius: 2vh;
+        margin-right: 60vh;
+    }   
+    .topo > a > input[type=button] {
+        width: 10vw;
+        background-color: rgba(245, 222, 179, 0);
+        cursor: pointer;
+        border: none;
+        color: white;
+        font-size: 4vh;
+        text-decoration: underline;
+    }
+    
+    .topo > a >img {
+        border-radius: 50%;
+        width: 10vh;
+        height: 10vh;
+    }
+    
+    /* Estilos para o main */
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .fotoMain {
+        background: url(https://placar.com.br/wp-content/uploads/2024/01/site_900x600-2-1.jpg);
+        filter: grayscale(1);
+        background-repeat: no-repeat;
+        background-size: cover ;
+        width: 100%;
+        height: 90vh;
+    }
+    
+    .selecao1 {
+        background-color: black;
+        width: 100%;
+        height: 40vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: solid 0.6vh rgb(107, 107, 107);
+    }
+    
+    .selecao1 > a > div {
+        cursor: pointer;
+        height: 30vh;
+        width: 70vh;
+        background-color: rgb(255, 255, 255);
+        border: solid 1vh black;
+    }
+    .selecao1 > a > div > p{
+        text-align: center ;
+        flex-direction: column;
+    }
+    
+    /* Estilos para mostrar os produtos */
+    .selecao2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    .selecao2 a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    a > .cardsPrinc {
+        background-color: lightgrey;
+        display: flex;
+        align-items: center;
+        border-radius: 8vh;
+        border: solid  black  4px;
+        height: 60vh;
+    }
+    
+    a > .cardsPrinc > div > div > img {
+        height: 40vh;	
+        width: 40vh;
+    }
+    a > .cardsPrinc > div {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    
+    a > .cardsPrinc > div {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    

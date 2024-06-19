@@ -10,11 +10,11 @@
     
     ?>
 
-    <div class="containerForm">
-
-        <fieldset>
-              <p><?php echo $usuario['codigo']?></p>
-            <legend>Alterar usuario</legend>
+    <div class="altUsuariodiv">
+        <h1>Editar dados</h1>
+        <fieldset class="fieldUser">
+              <p hidden><?php echo $usuario['codigo']?></p>
+            
             <form action="editarPerfil.act.php" method="post" enctype="multipart/form-data" id="formAddCliente" onsubmit="return verificaFormAlt()">
                 <input type="hidden" name="codigo" value="<?php echo $usuario['codigo']?>">
                 <input type="hidden" name="fotoUrl" value="<?php echo $usuario['fotoUrl']?>">
@@ -23,10 +23,10 @@
                 <p>Cpf: <input type="text" name="cpf"  value="<?php echo $usuario['cpf'] ?>"></p>
                 <p>sexo</p>
                 <select id="opcao" name="sexo">
-                    <option value="opcao1" <?php if($usuario['sexo'] == "opcao1"){echo "selected";} ?>>Macho</option>
-                    <option value="opcao2" <?php if($usuario['sexo'] == "opcao2"){echo "selected";} ?>>Muie</option>
-                    <option value="opcao3" <?php if($usuario['sexo'] == "opcao3"){echo "selected";} ?>>Pessoa Anormal</option>
-                    <option value="opcao4" <?php if($usuario['sexo'] == "opcao4"){echo "selected";} ?>>Deficiente</option>
+                    <option value="opcao1" <?php if($usuario['sexo'] == "opcao1"){echo "selected";} ?>>Masculino</option>
+                    <option value="opcao2" <?php if($usuario['sexo'] == "opcao2"){echo "selected";} ?>>Feminino</option>
+                    <option value="opcao3" <?php if($usuario['sexo'] == "opcao3"){echo "selected";} ?>>Não Binario</option>
+                    <option value="opcao4" <?php if($usuario['sexo'] == "opcao4"){echo "selected";} ?>>Prefiro não dizer</option>
                 </select>
                 <p>Telefone: <input type="text" name="telefone" value="<?php echo $usuario['telefone'] ?>"></p>
                 <p> Data <input type="date" name="nascto" value="<?php echo $usuario['nascto'] ?>"></p>
@@ -37,7 +37,7 @@
                     <option value="2" <?php if($usuario['time'] == "2"){echo "selected";} ?>>Palmeiras</option>
                 </select>
                 <p id="imgContainer">
-                    <img src=<?php echo $usuario['fotoUrl'] ?> alt="" id="previewImg">
+                    <img class="imgUser"src=<?php echo $usuario['fotoUrl'] ?> alt="" id="previewImg">
                 </p>
                 <p>
                     <label for="fileFoto">

@@ -3,7 +3,8 @@
     
 
 <div class="topo">
-    <input type="button" value="Filtrar">
+    <a href="logar.php"> <input type="button" value="login"> </a>
+    <a href="addCliente.php"> <input type="button" value="Cadastrar"> </a>
         <form action="pesquisar.act.php" method="GET">
             <input type="text" name="termo" placeholder="Digite o nome da camisa ou time">
             <input type="submit" value="Pesquisar" hidden>
@@ -43,9 +44,8 @@
             echo "</div>";
 
             echo "<div>";
-            echo "<p>Nome: {$produto['nomeCamisa']} - {$produto['timeProduto']}</p>";
-            echo "<p>Descrição: {$produto['infoProduto']}</p>";
-            echo "<p>Preço: R$ {$produto['precoProduto']}</p>";
+            echo "<p id = 'nome' style=''>Nome: {$produto['nomeCamisa']} - {$produto['timeProduto']}</p>";
+            echo "<p style ='font-size: x-large;'>Preço: R$ {$produto['precoProduto']}</p>";
             echo "</div>";
             echo "</div>";
             echo "</div></a>";
