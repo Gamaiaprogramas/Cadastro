@@ -42,10 +42,12 @@
             }
 
             echo "</div>";
-
+            $descricao_previa = strlen($produto['infoProduto']) > 80 ? substr($produto['infoProduto'], 0, 80) . '...' : $produto['infoProduto'];
             echo "<div>";
-            echo "<p id = 'nome' style=''>Nome: {$produto['nomeCamisa']} - {$produto['timeProduto']}</p>";
+            echo "<p id = 'nome' style=''>Nome: {$produto['nomeCamisa']} - {$produto['timeProduto']}</p>";  
+            echo "<p>{$descricao_previa}</p>";
             echo "<p style ='font-size: x-large;'>Preço: R$ {$produto['precoProduto']}</p>";
+          
             echo "</div>";
             echo "</div>";
             echo "</div></a>";

@@ -192,7 +192,7 @@ main {
 .selecao2 {
     display: flex;
     flex-wrap: wrap;
-    background-color: aqua;
+    background-color: rgb(195, 236, 236);
     justify-content: space-evenly;
 }
 
@@ -219,12 +219,16 @@ a > .cardsPrinc > div {
     cursor: pointer;
 }
 
+    /* parte mostrar pordutos */
+
 .mostrarProdDiv {
     display: flex;
     align-items: center;
     height: 100vh;
+    background-repeat: repeat;
+    background-size: 50vh;
     width: 100%;
-    background-color: aqua;
+    
 }
 
 .mostrarProdDiv > img {
@@ -236,44 +240,99 @@ a > .cardsPrinc > div {
 
 .mostrarProdDiv > div {
     margin-left: 10vh;
-    background-color: brown;
+    background-color: #ffffff;
     height: 70vh;
     border-radius: 4vh;
     width: 50vw;
     align-items: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: column;
-    border: solid 0.5vh red;
-    box-shadow: 1vh 1vh 10vh red;
+    border: solid 0.5vh rgb(0, 0, 0);
+    box-shadow: 1vh 1vh 10vh rgb(95, 94, 94);
 }
 
 .mostrarProdDiv > div > p {
     margin-left: 3vh;
 }
 
-.tituloProd {
+.mostrarProdDiv  > a{
+    text-decoration: none;
+    cursor: pointer;
+    position: absolute;
+    margin-bottom: 90vh;
+    margin-left: 2vh;
+    height: 7vh;
+    text-align: center;
+    width: 7vw;
+    background-color: white;
+    border-radius: 10vh;
+    border: 1vh solid black;
+    box-shadow: 1vh 1vh 10vh black;
     font-size: 4vh;
+    color: black;
+    transition: 1s;
+}
+.mostrarProdDiv > a:hover{
+    transform: translateX(1vh) translateY(1vh);
+    background-color: red;
+    text-align: center;
+    color: white;
+    border: 1vh solid white;
+}
+
+.buttProd{
+    height: 6vh;
+    width: 8vw;
+    transition: 1s;
+    cursor: pointer;
+}
+.buttProd:hover{
+    background-color: green;
+    border: solid 0.6vh white;
+    color: white;
+    border-radius: 10vh;
+    box-shadow: 1vh 1vh 10vh green;
+    transform: translateX(0.6vh) translateY(0.6vh);
+}
+
+.tituloProd {
+    font-size: 5vh;
     font-family: "Anton", sans-serif;
     font-weight: 100;
     font-style: normal;
 }
 
 .simbolo {
-    height: 7vh;
-    width: 7vh;
+    height: 10vh;
+    width: 10vh;
     position: absolute;
-    margin-top: 60vh; 
-    margin-left: 90vh;
+    margin-top: 54vh; 
+    margin-left: 87vh;
+    
 }
 
 .descProd {
-    background-color: aqua;
+   
     height: 45vh;
-    width: 90vh;
+    width: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow-x: auto;
 }
 
+.descProd > p{
+    font-size: 4vh;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+}
+
+.precoProd{
+    font-size: 5vh;
+    color: rgb(7, 82, 7);
+    
+}
 /* Carrinho */
 .carrinhoDiv {
     display: flex;
@@ -606,4 +665,8 @@ a > .cardsPrinc > div {
         flex-direction: column;
         cursor: pointer;
     }
+    
+
+        /* parte mostrar pordutos */
+
     

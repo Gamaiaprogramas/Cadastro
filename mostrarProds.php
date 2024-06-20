@@ -1,8 +1,7 @@
 <?php include('head.php'); ?>
+   <?php 
 
-<div class="mostrarProdDiv">
-    <a href="menu.php">Voltar</a>
-    <?php 
+ 
     session_start();
     require('connect.php');
 
@@ -16,20 +15,22 @@
 
         if(mysqli_num_rows($resultado) == 1) {
             $produto = mysqli_fetch_assoc($resultado);
+            echo "<div class='mostrarProdDiv' style='background-image: url(fotos/simbolos/{$produto['timeProduto']});'>";
+            echo "<a href='menu.php'>Voltar</a>";
             echo "<img src='{$produto['fotoProduto']}'>";
 
             echo "<div>";
             echo "<p class='tituloProd'>{$produto['nomeCamisa']} - {$produto['timeProduto']}</p>";
             echo "<div class='descProd'>";
-            echo "<p>Descrição: {$produto['infoProduto']}</p>";
+            echo "<p class='mostProd'>Descrição: {$produto['infoProduto']}</p>";
             echo "</div>";
-            echo "<p>R$ {$produto['precoProduto']}</p>";
+            echo "<p class ='precoProd'>R$ {$produto['precoProduto']}</p>";
             echo "<img class='simbolo' src='fotos/simbolos/{$produto['timeProduto']}.png'>";
             
             // Botão para adicionar ao carrinho
             echo "<form action='carrinho.act.php' method='post'>";
             echo "<input type='hidden' name='produto_cod' value='{$produto['codProduto']}'>";
-            echo "<button type='submit'>Adicionar ao carrinho</button>";
+            echo "<button class='buttProd' type='submit'>Adicionar ao carrinho</button>";
             echo "</form>";
 
         } else {
