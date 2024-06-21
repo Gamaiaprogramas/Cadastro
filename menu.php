@@ -3,8 +3,9 @@
     
 
 <div class="topo">
-    <a href="logar.php"> <input type="button" value="login"> </a>
-    <a href="addCliente.php"> <input type="button" value="Cadastrar"> </a>
+    <a href="carrinho.php">
+        <img src="icons/carrinho.png" class="carrinho">
+    </a>
         <form action="pesquisar.act.php" method="GET">
             <input type="text" name="termo" placeholder="Digite o nome da camisa ou time">
             <input type="submit" value="Pesquisar" hidden>
