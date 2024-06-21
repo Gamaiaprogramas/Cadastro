@@ -1,6 +1,7 @@
 <?php include('head.php'); ?>
 
 <div class="carrinhoDiv">
+    
     <h2>Carrinho de Compras</h2>
 
     <?php 
@@ -28,6 +29,7 @@
         echo "<a href='finalizarCompra.php'><button>Finalizar Compra</button></a>";
     } else {
         echo "<p>Seu carrinho está vazio.</p>";
+       
     }
     ?>
 

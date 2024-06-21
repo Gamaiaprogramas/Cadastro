@@ -20,7 +20,7 @@ if($busca->num_rows == 0){
         if (mysqli_query($con, "INSERT INTO `registro` (`codigo`, `nome`, `email`,`cpf`,`sexo`, `telefone`, `nascto`,`time`, `senha`,`fotoUrl`) VALUES 
         (NULL, '$nome', '$email','$cpf','$sexo','$telefone', '$nascto', '$time','$senha', '$path');")) {
             $msg = "<p class=\"alerta green\">Registro Criado com sucesso!</p>";
-            $destino = "location:addCliente.php";
+            $destino = "location:logar.php";
         } else {
             $msg = "<p class=\"alerta red\">Erro ao gravar registro: " . $con->error . "</p>";
             $destino = "location:addCliente.php";

@@ -21,7 +21,7 @@
 <main>
     <div class="fotoMain"></div>
     <div class="selecao1">
-        <a href="pesquisar.php"><div><p> Não achou os produtos? <br> pesquise</p></div></a>
+        <a href="pesquisar.act.php"><div><p> Não achou os produtos? <br> pesquise</p></div></a>
         
     </div>
     <div><h1>Todos os produtos:</h1></div>

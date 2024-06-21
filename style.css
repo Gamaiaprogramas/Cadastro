@@ -778,3 +778,131 @@ a > .cardsPrinc > div {
 }
 
     /* adicionar cliente */
+
+.containerForm2{
+    background-color: gray;
+    background-image: url(https://www.designi.com.br/images/preview/10321701.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.containerForm2 > h2{
+    font-size: 10vh;
+    color: white;
+}
+.containerForm2 > fieldset{
+    border:  solid 0.5vh black;
+    background-color: rgba(255, 255, 255, 0.644);
+    box-shadow: 1vh 1vh 10vh white;
+    padding: 1vh;
+    border-radius: 1vh;
+    height: 80vh;
+    overflow: auto;
+    display: flex;
+}
+.containerForm2 > fieldset > form{
+    display: flex;align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.containerForm2 > fieldset > form > label{
+    display: flex;
+    margin-top: 1vh;
+    
+    align-items: center;
+}
+.containerForm2  > fieldset >form > label > p{
+    font-weight: 400;
+    font-size: 3vh;
+}
+.containerForm2 > fieldset > form > label > input{
+    width: 20vh;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.514);
+    margin-left: 1vh;
+    border: solid 0.3vh black;
+    border-radius: 1vh;
+}
+
+.containerForm2 > fieldset > form > div  {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.txtCansado2{
+    font-size: 6vh;
+}
+.buttCadastro{
+    background-color: white;
+    border-radius: 1vh;
+    border: solid 0.5vh black;
+    padding: 1vh;
+    cursor: pointer;
+    transition: 1s;
+}
+.buttCadastro:hover{
+    transform: translateX(0.4vh)
+    translateY(0.5vh);
+    background-color: green;
+    border: white 0.5vh solid;
+}
+#previewImg{
+
+    height: 20vh;
+    width: 30vh;
+
+}
+
+.containerForm2 > h1 {
+    font-size: 3vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.containerForm2 > h1 > a{
+    color: white;
+}
+
+    /* pesquisar camisa */
+    .nav_pesquisa2{
+        background-color: aqua;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 13vh;
+        background-color: black;
+        justify-content: space-around;
+    }
+    .nav_pesquisa2 > a > img{
+        height: 10vh;
+        width: 10vh;
+        border-radius: 50%;
+        
+    }
+    .nav_pesquisa2 >form > input{
+        width: 37vh;
+        height: 5vh;
+        border-radius: 1vh;
+
+    }
+.nav_pesquisa2 > a{
+    font-size: 3vh;
+    color: white;
+}
+.produto{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.produto > img{
+    height: 20vh;
+    width: 30vh;
+}

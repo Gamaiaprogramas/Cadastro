@@ -115,22 +115,7 @@ function verificaForm() {
 // 	});
 // }
 
-function trocaCamisa(){
-	
-	var selecionado = document.getElementById("opcaoTime").value;
-	
- 	var imagem = document.getElementById("previewImg");
 
-  	var imagens = ["fotos/camisaFundo.png","fotos/corinthians.png","fotos/palmeiras.png"];
-
-
-  imagem.src = imagens[selecionado];
-
-  
-}
-
-document.getElementById("opcaoTime").addEventListener("change", trocaCamisa);
-	
 
 
 

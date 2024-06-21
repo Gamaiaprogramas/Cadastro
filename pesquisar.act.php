@@ -1,4 +1,7 @@
-       <nav class ="nav_pesquisa">
+<?php include('head.php'); ?>
+<body>
+       
+       <nav class ="nav_pesquisa2">
         <a href="menu.php">Voltar</a>
         <form action="pesquisar.act.php" method="GET">
             <input type="text" name="termo" placeholder="Digite o nome da camisa ou time">
@@ -12,14 +15,12 @@
     ?>
     </nav>
 <?php
-// Incluir arquivo de conexão com o banco de dados
+
 require('connect.php');
 
-// Verificar se foi submetido um termo de pesquisa via GET
+
 if(isset($_GET['termo'])) {
     $termo = $_GET['termo'];
-
-    // Consulta para buscar produtos pelo nome da camisa ou pelo time
     $query = "SELECT * FROM `produtos` WHERE nomeCamisa LIKE '%$termo%' OR timeProduto LIKE '%$termo%'";
     $resultado = mysqli_query($con, $query);
 
@@ -32,6 +33,7 @@ if(isset($_GET['termo'])) {
             echo "<p>Time: {$produto['timeProduto']}</p>";
             echo "<p>Descrição: {$produto['infoProduto']}</p>";
             echo "<p>Preço: R$ {$produto['precoProduto']}</p>";
+            echo "<img class='simbolo' src='fotos/simbolos/{$produto['timeProduto']}.png'>";
             echo "</div>";
             echo "</div></a>";
         }
@@ -40,3 +42,6 @@ if(isset($_GET['termo'])) {
     }
 }
 ?>
+
+</body>
+<?php include('bottom.php'); ?>
